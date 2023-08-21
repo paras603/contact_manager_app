@@ -3,6 +3,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <data>
+        <variable
+            name="userViewModel"
+            type="com.mastercoding.contactmanager.ViewModel.UserViewModel" />
+    </data>
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -19,6 +25,7 @@
             app:layout_constraintTop_toTopOf="parent">
 
             <EditText
+                android:text="@={userViewModel.inputName}"
                 android:id="@+id/nameET"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -33,6 +40,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <EditText
+                android:text="@={userViewModel.inputEmail}"
                 android:id="@+id/emailET"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
