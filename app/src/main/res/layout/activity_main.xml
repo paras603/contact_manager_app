@@ -6,7 +6,7 @@
     <data>
         <variable
             name="userViewModel"
-            type="com.mastercoding.contactmanager.ViewModel.UserViewModel" />
+            type="com.mastercoding.contactmanager.myViewModel.UserViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -27,13 +27,15 @@
             <EditText
                 android:text="@={userViewModel.inputName}"
                 android:id="@+id/nameET"
+                android:autofillHints="name"
+                android:inputType="text"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="107dp"
                 android:layout_marginBottom="1dp"
-                android:hint="Enter name"
+                android:hint="@string/name_hint"
                 app:layout_constraintBottom_toTopOf="@+id/emailET"
                 app:layout_constraintEnd_toStartOf="@+id/btn1"
                 app:layout_constraintStart_toStartOf="parent"
@@ -42,12 +44,14 @@
             <EditText
                 android:text="@={userViewModel.inputEmail}"
                 android:id="@+id/emailET"
+                android:inputType="textEmailAddress"
+                android:autofillHints="emailAddress"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginEnd="97dp"
                 android:layout_marginBottom="11dp"
-                android:hint="Enter email"
+                android:hint="@string/email_hint"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="@+id/nameET"
                 app:layout_constraintEnd_toStartOf="@+id/btn2"
@@ -55,23 +59,25 @@
                 app:layout_constraintTop_toBottomOf="@+id/nameET" />
 
             <Button
+                android:onClick="@{()->userViewModel.saveOrUpdate()}"
                 android:id="@+id/btn1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
                 android:layout_marginEnd="40dp"
-                android:text="SAVE"
+                android:text="@={userViewModel.saveOrUpdateButtonText}"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/nameET"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <Button
+                android:onClick="@{()->userViewModel.clearALlOrDelete()}"
                 android:id="@+id/btn2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="40dp"
                 android:layout_marginBottom="16dp"
-                android:text="DELETE"
+                android:text="@={userViewModel.clearALlOrDeleteButtonText}"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/emailET"

@@ -1,4 +1,4 @@
-package com.mastercoding.contactmanager.ViewModel
+package com.mastercoding.contactmanager.myViewModel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider

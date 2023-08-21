@@ -10,6 +10,7 @@
         app:cardElevation="10dp">
 
         <LinearLayout
+            android:id="@+id/listItemLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
