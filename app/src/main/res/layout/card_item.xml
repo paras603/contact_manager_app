@@ -21,7 +21,8 @@
                 android:id="@+id/name_textView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="8dp"
+                android:layout_marginHorizontal="8dp"
+                android:layout_marginTop="8dp"
                 android:text="Your Name"
                 android:textSize="22sp" />
 
@@ -29,7 +30,8 @@
                 android:id="@+id/email_textView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="8dp"
+                android:layout_marginHorizontal="8dp"
+                android:layout_marginBottom="8dp"
                 android:text="example@example.com"
                 android:textSize="18sp" />
         </LinearLayout>
