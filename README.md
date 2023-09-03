@@ -3,7 +3,7 @@ Contact Manager
 
 # Contact Manager Android App
 
-![App Screenshot](screenshot.png)
+<!-- ![App Screenshot](screenshot.png) -->
 
 ## Description
 
